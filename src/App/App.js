@@ -1,15 +1,28 @@
 import React from 'react';
+
+import myDogs from './dogs';
+import allEmployees from './employees';
+import DogPen from '../components/DogPen/DogPen';
+
+
 import './App.scss';
 
 class App extends React.Component {
-  checkingConsole = 'Hello';
+  state = {
+    dogs: [],
+    employees: [],
+  }
+
+  componentDidMount() {
+    this.setState({ dogs: myDogs });
+    this.setState({ employees: allEmployees });
+  }
 
   render() {
+    const { dogs } = this.state;
     return (
-      <div>
-        {console.error(this.checkingConsole)}
-        <p>Hello Test!!!!</p>
-        <button className="btn btn-danger">Working button</button>
+      <div className="App">
+        <DogPen dogs ={dogs}/>
       </div>
     );
   }
