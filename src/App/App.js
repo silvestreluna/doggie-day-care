@@ -11,7 +11,7 @@ class App extends React.Component {
     dogs: [],
     employees: [],
   }
-
+  
   componentDidMount() {
     this.setState({ dogs: myDogs });
     this.setState({ employees: allEmployees });
