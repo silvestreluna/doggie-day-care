@@ -24,6 +24,7 @@ class App extends React.Component {
       <div className="App">
         <h1>Doggie Day Care</h1>
         <DogPen dogs ={dogs}/>
+        <h5 className="m-3">Employees</h5>
         <StaffRoom employees={employees}/>
       </div>
     );
