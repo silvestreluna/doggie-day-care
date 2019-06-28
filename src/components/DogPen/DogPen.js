@@ -1,8 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Dogs from '../Dogs/Dogs';
-import DogShape from '../propz/dogShape';
-import PropTypes from 'prop-types';
+import DogShape from '../../helpers/propz/dogShape';
 
 class DogPen extends React.Component {
   static propTypes = {
