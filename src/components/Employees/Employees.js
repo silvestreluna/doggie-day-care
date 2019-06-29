@@ -1,6 +1,6 @@
 import React from 'react';
 import './Employees.scss';
-import employeesShape from '../propz/employeesShape';
+import employeesShape from '../../helpers/propz/employeesShape';
 
 class Employees extends React.Component {
   static propTypes = {
