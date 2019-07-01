@@ -1,8 +1,11 @@
 import React from 'react';
-import myDogs from '../../App/dogs';
-import allEmployees from '../../App/employees';
+// import myDogs from '../../App/dogs';
+// import allEmployees from '../../App/employees';
 import DogPen from '../DogPen/DogPen';
 import StaffRoom from '../StaffRoom/StaffRoom';
+import dogsData from '../../helpers/data/getDogsData';
+import employeesData from '../../helpers/data/getEmployeesData';
+
 
 class Home extends React.Component {
   state = {
@@ -10,9 +13,18 @@ class Home extends React.Component {
     employees: [],
   }
 
+  getAllData = () => {
+    dogsData.getDogsData()
+      .then(dogs => this.setState({ dogs }))
+      .catch(err => console.error(err, 'No data came back'));
+
+    employeesData.getAllEmp()
+      .then(employees => this.setState({ employees }))
+      .catch(err => console.error(err, 'No emp data came back'));
+  }
+
   componentDidMount() {
-    this.setState({ dogs: myDogs });
-    this.setState({ employees: allEmployees });
+    this.getAllData();
   }
 
   render() {
