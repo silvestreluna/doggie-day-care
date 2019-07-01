@@ -1,0 +1,42 @@
+{
+  "dog1": {
+      "id": "dog1",
+      "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9ojytfmcoQ41KsMMEfHX-X6c_CCDzSUOO7Fpw-duPe8XlHwNZ",
+      "name": "Apollo",
+      "age": "1 Year",
+      "type": "Bulldog",
+      "color": "Brown"
+  },
+  "dog2": {
+    "id": "dog2",
+    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7dDqs7TbW_157wOb53Tv8X7kXyQPHHsRKAu2LpuC6Qc3Vs3dEQw",
+    "name": "Zeus",
+    "age": "2 Years",
+    "type": "German Shepherd",
+    "color": "Black"
+  }, 
+  "dog3": {
+    "id": "dog3",
+    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJGiZZZ3uIGaj1k_8DC7wk-I5UUCAQksC9jtLKPHfTkMCkOAgR",
+    "name": "Orion",
+    "age": "3 Years",
+    "type": "Poodle",
+    "color": "White"
+  },
+  "dog4": {
+    "id": "gog5",
+    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2Ptc64-ytdZg9LmJOgryjcCvjHO1BjiNGGNwtHFxjnQ2TQBL4hw",
+    "name": "Alba",
+    "age": "5 Years",
+    "type": "Pitbull",
+    "color": "Orange"
+  },
+  "dog5": {
+    "id": "dog4",
+    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT27lw7NkFWw4-pcUgiHXk_NyjRPJMAyaUz_6r9NpDTPI0ShlWWng",
+    "name": "Neo",
+    "age": "4 years",
+    "type": "Pug",
+    "color": "Buff"
+  }
+}
