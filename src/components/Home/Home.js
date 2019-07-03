@@ -8,6 +8,7 @@ import WalkPen from '../WalkPen/WalkPen';
 import dogsData from '../../helpers/data/getDogsData';
 import employeesData from '../../helpers/data/getEmployeesData';
 import allWalks from '../../helpers/data/getWalkersData';
+import testingData from '../../helpers/data/smashData';
 
 import './Home.scss';
 
@@ -33,8 +34,10 @@ class Home extends React.Component {
       .catch(err => console.error(err, 'No walks came back'));
   }
 
+
   componentDidMount() {
     this.getAllData();
+    console.error(testingData.smashingAllData(), 'testing');
   }
 
   render() {
