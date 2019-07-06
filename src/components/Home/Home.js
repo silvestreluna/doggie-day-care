@@ -4,11 +4,13 @@ import React from 'react';
 import DogPen from '../DogPen/DogPen';
 import StaffRoom from '../StaffRoom/StaffRoom';
 import WalkPen from '../WalkPen/WalkPen';
+import NewWalk from '../NewWalk/NewWalk';
 
 import dogsData from '../../helpers/data/getDogsData';
 import employeesData from '../../helpers/data/getEmployeesData';
 import allWalks from '../../helpers/data/getWalkersData';
 import dataSmashing from '../../helpers/data/smashData';
+
 
 import './Home.scss';
 
@@ -56,7 +58,9 @@ class Home extends React.Component {
         <DogPen dogs={dogs} walks={walks} combinedData={combinedData} />
         <h5 className="m-3">Employees</h5>
         <StaffRoom employees={employees} />
+        <NewWalk dogs={dogs} combinedData={combinedData}/>
         <WalkPen walks={walks} />
+
       </div>
     );
   }
