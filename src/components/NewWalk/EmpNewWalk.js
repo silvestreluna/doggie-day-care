@@ -8,7 +8,6 @@ import {
 
 class EmpNewWalk extends React.Component {
   state = {
-    selectedEmp: '',
     dropdownOpen: false,
   }
 
@@ -22,24 +21,14 @@ class EmpNewWalk extends React.Component {
 
   render() {
     const { combinedData } = this.props;
-    const { selectedEmp } = this.state;
     const emp = combinedData.map(a => <DropdownItem key={a.walkerName} value={a.walkerName}>{a.walkerName}</DropdownItem>);
-
-    const saveEmpSelection = (e) => {
-      e.preventDefault();
-      const getSelectedEmp = e.target.value;
-      this.setState({ selectedEmp: getSelectedEmp });
-      console.error(selectedEmp);
-    };
-
-
     return (
       <div className="EmpNewWalk">
           <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
             <DropdownToggle caret>
               Choose a Employee:
             </DropdownToggle>
-            <DropdownMenu onClick={saveEmpSelection}>
+            <DropdownMenu onClick={this.props.empSelection}>
               {emp}
             </DropdownMenu>
           </ButtonDropdown>

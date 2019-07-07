@@ -55,10 +55,10 @@ class Home extends React.Component {
     return (
       <div className="Home">
         <h1>Doggie Day Care</h1>
+        <NewWalk dogs={dogs} combinedData={combinedData}/>
         <DogPen dogs={dogs} walks={walks} combinedData={combinedData} />
         <h5 className="m-3">Employees</h5>
         <StaffRoom employees={employees} />
-        <NewWalk dogs={dogs} combinedData={combinedData}/>
         <WalkPen walks={walks} />
 
       </div>
