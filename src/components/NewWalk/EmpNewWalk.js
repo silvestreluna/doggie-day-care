@@ -21,10 +21,10 @@ class EmpNewWalk extends React.Component {
 
   render() {
     const { combinedData } = this.props;
-    const emp = combinedData.map(a => <DropdownItem key={a.walkerName} value={a.walkerName}>{a.walkerName}</DropdownItem>);
+    const emp = combinedData.map(a => <DropdownItem key={a.walkerName} value={a.empId}>{a.walkerName}</DropdownItem>);
     return (
       <div className="EmpNewWalk">
-          <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+          <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} className="mt-3">
             <DropdownToggle caret>
               Choose a Employee:
             </DropdownToggle>

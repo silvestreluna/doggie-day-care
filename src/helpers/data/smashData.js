@@ -15,13 +15,14 @@ const gettingAllDataToSmash = () => new Promise((resolve, reject) => {
               allEmp.forEach((emp) => {
                 if (dog.id === walk.dogId && walk.employeeId === emp.id) {
                   const newObj = {
-                    id: dog.id,
+                    idDog: dog.id,
                     walkId: walk.id,
                     imgUrl: dog.imgUrl,
                     dogName: dog.name,
                     age: dog.age,
                     type: dog.type,
                     color: dog.color,
+                    empId: emp.id,
                     walkerName: emp.name,
                     date: walk.date,
                   };

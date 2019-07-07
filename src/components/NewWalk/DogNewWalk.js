@@ -23,7 +23,12 @@ class DogNewWalk extends React.Component {
 
   render() {
     const { dogs } = this.props;
-    const dog = dogs.map(a => <DropdownItem key={a.name} value={a.name}>{a.name}</DropdownItem>);
+    const { combinedData } = this.props;
+    const onlyCombId = combinedData.map(a => a.idDog);
+    const dogWithMissingWalker = dogs.filter(a => !onlyCombId.includes(a.id));
+
+    const dog = dogWithMissingWalker.map(a => <DropdownItem key={a.id} value={a.id}>{a.name}</DropdownItem>);
+
     return (
       <div className="DogNewWalk">
           <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
@@ -32,7 +37,6 @@ class DogNewWalk extends React.Component {
             </DropdownToggle>
             <DropdownMenu onClick={this.props.dogSelection}>
               {dog}
-              {console.error(this.props.combinedData)}
             </DropdownMenu>
           </ButtonDropdown>
       </div>
