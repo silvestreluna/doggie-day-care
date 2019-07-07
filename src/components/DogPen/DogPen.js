@@ -14,9 +14,8 @@ class DogPen extends React.Component {
     const { combinedData } = this.props;
 
     const makeDogsCard = dogs.map(dog => (
-      <Dogs key={dog.id} dog={dog} combinedData={combinedData} />
+      <Dogs key={dog.id} dog={dog} combinedData={combinedData} deleteWalker={this.props.deleteWalker}/>
     ));
-
 
     return (
       <div className="Dogs">

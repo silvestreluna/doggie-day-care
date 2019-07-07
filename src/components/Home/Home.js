@@ -41,10 +41,21 @@ class Home extends React.Component {
       .catch(err => console.error(err, 'No walks came back'));
   }
 
+  deleteWalker = (e) => {
+    e.preventDefault();
+    const getCardId = e.target.value;
+    const filterId = this.state.walks.filter(a => a.dogId === getCardId);
+    const getWalkId = filterId.map(walk => walk.id);
+    const onlyWalkIdString = getWalkId.toString();
+    dogsData.deleteWalker(onlyWalkIdString);
+    this.getAllData();
+  }
+
 
   componentDidMount() {
     this.getAllData();
   }
+
 
   render() {
     const { dogs } = this.state;
@@ -55,11 +66,15 @@ class Home extends React.Component {
     return (
       <div className="Home">
         <h1>Doggie Day Care</h1>
-        <DogPen dogs={dogs} walks={walks} combinedData={combinedData} />
+        <DogPen dogs={dogs} walks={walks} combinedData={combinedData} deleteWalker={this.deleteWalker} />
         <h5 className="m-3">Employees</h5>
         <StaffRoom employees={employees} />
-        <NewWalk dogs={dogs} combinedData={combinedData} getAllData={this.getAllData}/>
-        <WalkPen walks={walks} />
+        <NewWalk
+        dogs={dogs}
+        combinedData={combinedData}
+        employees={employees}
+        getAllData={this.getAllData}/>
+        <WalkPen walks={walks}/>
 
       </div>
     );

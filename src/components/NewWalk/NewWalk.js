@@ -46,9 +46,10 @@ class NewWalk extends React.Component {
   render() {
     const { dogs } = this.props;
     const { combinedData } = this.props;
+    const { employees } = this.props;
     const loadEmpComponent = () => {
       if (this.state.selectedDog !== '') {
-        return <EmpNewWalk combinedData={combinedData} empSelection={this.empSelection}/>;
+        return <EmpNewWalk employees={employees} empSelection={this.empSelection}/>;
       }
       return '';
     };
