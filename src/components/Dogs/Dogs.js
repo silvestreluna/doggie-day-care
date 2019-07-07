@@ -8,7 +8,7 @@ class Dogs extends React.Component {
     const { combinedData } = this.props;
 
     const gettingEachWalker = combinedData.map((doggy) => {
-      if (doggy.id === dog.id) {
+      if (doggy.idDog === dog.id) {
         return <span key={doggy.walkId}> Walker: {doggy.walkerName}</span>;
       }
       return '';

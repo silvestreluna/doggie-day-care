@@ -17,5 +17,6 @@ const getDogsData = () => new Promise((resolve, reject) => {
     .catch(err => reject(err, 'No dogs came back'));
 });
 
+const postNewWalker = newWalkerObj => axios.post(`${firebaseUrl}/walks.json`, newWalkerObj);
 
-export default { getDogsData };
+export default { getDogsData, postNewWalker };
