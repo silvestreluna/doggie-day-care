@@ -16,9 +16,9 @@ class Dogs extends React.Component {
 
     const filteringWalker = gettingEachWalker.filter(oneItem => oneItem !== '');
 
-    const anotherTest = () => {
+    const handleDogWithNoWalker = () => {
       if (filteringWalker.length === 0) {
-        return <span>Select a Walker below</span>;
+        return <span className="text-danger">Select a Walker below</span>;
       }
       return '';
     };
@@ -33,10 +33,17 @@ class Dogs extends React.Component {
           <div className="walker text-muted">
             <h6>
                 {filteringWalker}
-                {anotherTest()}
+                {handleDogWithNoWalker()}
             </h6>
           </div>
         </div>
+        {
+          filteringWalker.length > 0 ? (
+            <button className="btn btn-danger btn-sm" value={dog.id} onClick={this.props.deleteWalker}>Delete Walker</button>
+          ) : (
+            ''
+          )
+        }
       </div>
     );
   }

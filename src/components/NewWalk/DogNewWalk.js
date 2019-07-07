@@ -27,7 +27,7 @@ class DogNewWalk extends React.Component {
     const onlyCombId = combinedData.map(a => a.idDog);
     const dogWithMissingWalker = dogs.filter(a => !onlyCombId.includes(a.id));
 
-    const dog = dogWithMissingWalker.map(a => <DropdownItem key={a.id} value={a.id}>{a.name}</DropdownItem>);
+    const dog = dogWithMissingWalker.map(a => <DropdownItem key={a.name} value={a.id}>{a.name}</DropdownItem>);
 
     return (
       <div className="DogNewWalk">
