@@ -139,13 +139,13 @@ class Home extends React.Component {
         combinedData={combinedData}
         deleteWalker={this.deleteWalker}
         editWalker={this.editWalker}/>
-        <h5 className="m-3">Employees</h5>
-        <StaffRoom employees={employees} />
         <NewWalk
         dogs={dogs}
         combinedData={combinedData}
         employees={employees}
         getAllData={this.getAllData}/>
+        <h5 className="m-3">Employees</h5>
+        <StaffRoom employees={employees} />
         <WalkPen walks={walks}/>
       </div>
     );
