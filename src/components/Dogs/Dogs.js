@@ -9,7 +9,7 @@ class Dogs extends React.Component {
 
     const gettingEachWalker = combinedData.map((doggy) => {
       if (doggy.idDog === dog.id) {
-        return <span key={doggy.walkId}> Walker: {doggy.walkerName}</span>;
+        return <span key={doggy.walkId}> Walker: {doggy.walkerName} <br></br>Date: {doggy.date}</span>;
       }
       return '';
     });
@@ -39,7 +39,14 @@ class Dogs extends React.Component {
         </div>
         {
           filteringWalker.length > 0 ? (
-            <button className="btn btn-danger btn-sm" value={dog.id} onClick={this.props.deleteWalker}>Delete Walker</button>
+            <button className="btn btn-danger btn-sm mb-2" value={dog.id} onClick={this.props.deleteWalker}>Delete Walker</button>
+          ) : (
+            ''
+          )
+        }
+        {
+          filteringWalker.length > 0 ? (
+            <button className="btn btn-secondary btn-sm" value={dog.id} onClick={this.props.editWalker}>Edit</button>
           ) : (
             ''
           )

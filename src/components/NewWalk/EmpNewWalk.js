@@ -30,7 +30,6 @@ class EmpNewWalk extends React.Component {
             </DropdownToggle>
             <DropdownMenu onClick={this.props.empSelection}>
               {emp}
-              {console.error(employees)}
             </DropdownMenu>
           </ButtonDropdown>
       </div >

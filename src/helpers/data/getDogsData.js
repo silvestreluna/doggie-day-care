@@ -19,10 +19,12 @@ const getDogsData = () => new Promise((resolve, reject) => {
 
 const postNewWalker = newWalkerObj => axios.post(`${firebaseUrl}/walks.json`, newWalkerObj);
 const deleteWalker = walkerId => axios.delete(`${firebaseUrl}/walks/${walkerId}.json`);
+const editWalkFirebase = (walkId, editNewObj) => axios.patch(`${firebaseUrl}/walks/${walkId}.json`, editNewObj);
 
 
 export default {
   getDogsData,
   postNewWalker,
   deleteWalker,
+  editWalkFirebase,
 };
